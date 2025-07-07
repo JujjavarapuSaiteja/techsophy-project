@@ -1,0 +1,66 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Risk Assessment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <div class="max-w-lg mx-auto mt-10 bg-white p-8 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-blue-700 text-center">Health Risk Assessment</h2>
+
+    <form method="post" action="/assess" class="space-y-4">
+      <div>
+        <label class="block font-medium">Age:</label>
+        <input type="number" name="age" required class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div>
+        <label class="block font-medium">BMI:</label>
+        <input type="number" name="bmi" step="0.1" required class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div>
+        <label class="block font-medium">Glucose:</label>
+        <input type="number" name="glucose" required class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div>
+        <label class="block font-medium">Blood Pressure:</label>
+        <input type="number" name="bp" required class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div>
+        <label class="block font-medium">Cholesterol:</label>
+        <input type="number" name="cholesterol" required class="w-full p-2 border border-gray-300 rounded">
+      </div>
+
+      <div class="flex items-center">
+        <input type="checkbox" name="family_history" class="mr-2">
+        <label class="font-medium">Family History of Diabetes</label>
+      </div>
+
+      <div class="flex items-center">
+        <input type="checkbox" name="smoker" class="mr-2">
+        <label class="font-medium">Smoker</label>
+      </div>
+
+      <div>
+        <label class="block font-medium">Activity Level:</label>
+        <select name="activity_level" class="w-full p-2 border border-gray-300 rounded">
+          <option value="high">High</option>
+          <option value="moderate">Moderate</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <div class="text-center">
+        <input type="submit" value="Assess My Health Risk"
+               class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded cursor-pointer">
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
